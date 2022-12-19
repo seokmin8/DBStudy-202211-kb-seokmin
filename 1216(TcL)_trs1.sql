@@ -20,7 +20,7 @@ create table `transaction_study`.`emp_mst`(
 select @@autocommit;
 
 start transaction; -- 트랜잭션의 시작 , autocommit일땐 시작하자마자 트랜잭션이 종료됨. sp를 사용못함.
-savepoint p1; -- point 1
+savepoint p1; -- point 1 
 insert into emp_mst
 values
 	(0, '김준일'),
