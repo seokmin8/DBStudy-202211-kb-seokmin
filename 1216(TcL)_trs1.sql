@@ -45,7 +45,7 @@ select * from emp_mst;  --  insert 된 mst 상태
 rollback to p1; 		--  rollback point 1 지점 (insert 전)
 select * from emp_mst;	--  rollback 된 상태확인
 -- rollback 만 적었을 땐 시작점으로 돌아감.
+rollback;
 commit; -- 트랜잭션이 끝나면 commit을 해줘야 한다, commit 후엔 savepoint는 날아감, 사용된 autoincrement도 날아감!
 -- 트랜잭션 사용 시 무조건 commit을 해준다!! 안해주면 데이터 다 날아감
-rollback;
 truncate emp_mst;
